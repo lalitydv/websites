@@ -1,25 +1,25 @@
 // import content
-import { createElement, useState } from "react";
-import { content } from "../Content";
+import { createElement, useState } from 'react';
+import { content } from '../Content';
 // import modal package
-import Modal from "react-modal";
+import Modal from 'react-modal';
 
 const customStyles = {
   content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    maxWidth: "23rem",
-    width: "90%",
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    maxWidth: '23rem',
+    width: '90%',
   },
   overlay: {
-    padding: "2rem",
+    padding: '2rem',
   },
 };
-Modal.setAppElement("#root");
+Modal.setAppElement('#root');
 
 const Skills = () => {
   const { skills } = content;
@@ -46,9 +46,14 @@ const Skills = () => {
           <img className="h-10" src={selectSkill?.logo} alt="..." />
           <h6>{selectSkill?.name}</h6>
         </div>
-        <br />
+        <br />  
         <ul className="list-decimal px-4 font-Poppins sm:text-sm text-xs !leading-7">
-          <li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+          {selectSkill?.disc}
+          <li> {selectSkill?.disc1}</li>
+          <li> {selectSkill?.disc2}</li>
+          <li> {selectSkill?.disc3}</li>
+          <li> {selectSkill?.disc4}</li>
+          {/* <li>Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
           <li>Lorem ipsum dolor sit, ame.</li>
           <li>Lorem ipsum dolor sit, amet consectetur</li>
           <li>
@@ -57,7 +62,7 @@ const Skills = () => {
           <li>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad est
             beatae quos rem.
-          </li>
+          </li> */}
         </ul>
         <br />
         <div className="flex justify-end">

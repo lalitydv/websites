@@ -1,6 +1,6 @@
 // import content
-import { useEffect } from "react";
-import { content } from "../Content";
+import { useEffect } from 'react';
+import { content } from '../Content';
 const Hero = () => {
   const { hero } = content;
 
@@ -13,7 +13,7 @@ const Hero = () => {
           className="absolute h-full md:w-4/12 w-8/12 top-0 right-0 bg-primaryLinear bottom-0 -z-10"
         >
           <h1 className="rotate-90 absolute top-[30%] right-[-15%] text-[#EAF2FA]">
-            {hero.firstName}{" "}
+            {hero.firstName}{' '}
             <span className="text-dark_primary">{hero.LastName}</span>
           </h1>
         </div>
@@ -32,7 +32,7 @@ const Hero = () => {
                 data-aos="fade-down"
                 data-aos-delay={i * 300}
                 className={`flex items-center w-80 gap-5
-            ${i === 1 && " flex-row-reverse text-right"}  `}
+            ${i === 1 && ' flex-row-reverse text-right'}  `}
               >
                 <h3>{content.count}</h3>
                 <p>{content.text}</p>
