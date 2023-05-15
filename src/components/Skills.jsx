@@ -35,7 +35,7 @@ const Skills = () => {
   }
 
   return (
-    <section className="min-h-fit bg-bg_light_primary" id="skills">
+    <section className="min-h-fit bg-bg_light_primary " id="skills">
       {/* modal */}
       <Modal
         isOpen={modalIsOpen}
@@ -74,10 +74,10 @@ const Skills = () => {
 
       {/* content */}
       <div className="md:container px-5  py-14">
-        <h2 className="title" data-aos="fade-down">
+        <h2 className="title text-textColor" data-aos="fade-down">
           {skills.title}
         </h2>
-        <h4 className="subtitle" data-aos="fade-down">
+        <h4 className=" text-[#704a2e]" data-aos="fade-down">
           {skills.subtitle}
         </h4>
         <br />

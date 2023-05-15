@@ -23,7 +23,7 @@ const App = () => {
     });
   }, []);
   return (
-    <div className="">
+    <div className="overflow-x-scroll">
    
       <Navbar />
       <Hero />
