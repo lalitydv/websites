@@ -240,7 +240,20 @@ export const content = {
         Link: 'https://youtube-lalit.netlify.app/',
       },
     ],
+    React_Component: [
+      {
+        title: 'React App',
+        image: project1,
+        Link: 'https://reactjs.org/',
+      },
+      {
+        title: 'node App',
+        image: project1,
+        Link: 'https://reactjs.org/',
+      },
+    ],
   },
+
   Testimonials: {
     title: 'Testimonials',
     subtitle: 'MY CLIENT REVIEWS',
