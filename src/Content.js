@@ -47,6 +47,19 @@ import { BiUser } from 'react-icons/bi';
 import { RiServiceLine, RiProjectorLine } from 'react-icons/ri';
 import { MdOutlinePermContactCalendar } from 'react-icons/md';
 
+// html
+import TeacherAdmin from './assets/images/Projects/html/Admin.png';
+import TeacherUser from './assets/images/Projects/html/user.png';
+
+// next js
+import Emerge from './assets/images/Projects/next js/Emerge.png';
+
+// Animation
+import Cup from './assets/images/Projects/Animation/cup.png';
+import Earth from './assets/images/Projects/Animation/Earth.png';
+import Portfolio from './assets/images/Projects/Animation/iMac 27-inch Mockup.png';
+import Cerbosys from './assets/images/Projects/Animation/cerbosy.png';
+
 export const content = {
   nav: [
     {
@@ -208,48 +221,155 @@ export const content = {
     title: 'Projects',
     subtitle: 'MY CREATION',
     image: person_project,
-    project_content: [
+    Html_Component: [
+      {
+        title: 'Teacher Admin ',
+        image: TeacherAdmin,
+        Link: 'https://teacher-for-all.netlify.app',
+        desc: 'Teacher for all is a free website, trusted by thousands of students and teachers, throughout the world.We are not the biggest, but we care the most. Even though you will visit other websites for similar services, ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
+      },
+      {
+        title: 'Teacher Website ',
+        image: TeacherUser,
+        Link: 'https://teachars.netlify.app',
+        desc: 'Teacher for all is a free website, trusted by thousands of students and teachers, throughout the world.We are not the biggest, but we care the most. Even though you will visit other websites for similar services, ',
+        linkdin: 'linkedin.com/in/lalit-yadav-8010741a5',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
+      },
+    ],
+    Animation_Component: [
+      {
+        title: 'Portfolio',
+        image: Portfolio,
+        Link: 'https://portfolio-3d-animation.netlify.app/',
+        desc: 'this is a portfolio animation thre is sectuon like   About Work and Contect',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
+      },
+      {
+        title: ' Cerbosys parallax Effect',
+        image: Cerbosys,
+        Link: 'https://cerbosys.netlify.app/',
+        desc: 'this is parallax Effect image make and do this ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
+      },
+      {
+        title: 'Cup tea ',
+        image: Cup,
+        Link: 'https://chaicupanimation.netlify.app/',
+        desc: 'this is the project of Cup and tea with html css and Animation classes',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
+      },
+      {
+        title: 'Earth with Animation ',
+        image: Earth,
+        Link: 'https://earthglobe.netlify.app/',
+        desc: 'this is a simple animation project to earth  routing and  scrolling left  to right ',
+        linkdin: 'linkedin.com/in/lalit-yadav-8010741a5',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
+      },
+    ],
+    React_Project: [
       {
         title: 'Company ',
         image: project1,
         Link: 'http://cerbosys.com/',
+        desc: 'Teacher for all is a free website, trusted by thousands of students and teachers, throughout the world.We are not the biggest, but we care the most. Even though you will visit other websites for similar services, ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
       },
       {
         title: 'Admin ',
         image: project2,
         Link: 'http://admin.cerbosys.com/',
+        desc: 'Teacher for all is a free website, trusted by thousands of students and teachers, throughout the world.We are not the biggest, but we care the most. Even though you will visit other websites for similar services, ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
       },
       {
         title: 'Mrsharvisorganic',
         image: project3,
         Link: 'https://mrsharvisorganique.com/',
+        desc: 'Teacher for all is a free website, trusted by thousands of students and teachers, throughout the world.We are not the biggest, but we care the most. Even though you will visit other websites for similar services, ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
       },
       {
         title: 'Kangen_water',
         image: Sarthi,
         Link: 'https://kangenwater.netlify.app/',
+        desc: 'Teacher for all is a free website, trusted by thousands of students and teachers, throughout the world.We are not the biggest, but we care the most. Even though you will visit other websites for similar services, ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
       },
       {
         title: 'Youtube Clone',
         image: Youtub,
         Link: 'https://youtube-lalit.netlify.app/',
+        desc: 'Teacher for all is a free website, trusted by thousands of students and teachers, throughout the world.We are not the biggest, but we care the most. Even though you will visit other websites for similar services, ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
       },
       {
         title: 'Coder Chatbot',
         image: chatbot,
         Link: 'https://youtube-lalit.netlify.app/',
+        desc: 'Teacher for all is a free website, trusted by thousands of students and teachers, throughout the world.We are not the biggest, but we care the most. Even though you will visit other websites for similar services, ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
       },
     ],
-    React_Component: [
+    Next_Project: [
       {
-        title: 'React App',
-        image: project1,
-        Link: 'https://reactjs.org/',
-      },
-      {
-        title: 'node App',
-        image: project1,
-        Link: 'https://reactjs.org/',
+        title: 'Emerge Computers Users ',
+        image: Emerge,
+        Link: 'https://emergecomputers.com/',
+        desc: 'Emerge Computers Users it is E-commerce website ',
+        linkdin: 'https://www.linkedin.com/in/lalit-yadav-8010741a5/',
+        Github: 'https://github.com/lalitydv',
+        behance: ' https://www.behance.net/lalitydv',
+        Instgram: 'https://instagram.com/0_y_a_d_a_v_0?igshid=MzNlNGNkZWQ4Mg==',
+        fb: 'https://www.facebook.com/profile.php?id=100010771231791&mibextid=ZbWKwL',
       },
     ],
   },

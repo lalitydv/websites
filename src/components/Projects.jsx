@@ -5,9 +5,32 @@ import React from 'react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-import { Pagination } from 'swiper';
-
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Button,
+  Tooltip,
+  IconButton,
+} from '@material-tailwind/react';
+import {
+  AiFillLinkedin,
+  AiFillGithub,
+  AiFillBehanceCircle,
+  AiFillInstagram,
+  AiFillFacebook,
+} from 'react-icons/ai';
+import {
+  BanknotesIcon,
+  StarIcon,
+  HeartIcon,
+  WifiIcon,
+  HomeIcon,
+  TvIcon,
+  FireIcon,
+} from '@heroicons/react/24/solid';
 const Projects = () => {
   const [openTab, setOpenTab] = React.useState(1);
   const { Projects } = content;
@@ -126,7 +149,7 @@ const Projects = () => {
                   Next js
                 </a>
               </li>
-              <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
+              {/* <li className="-mb-px mr-2 last:mr-0 flex-auto text-center">
                 <a
                   className={
                     'text-xs font-bold uppercase px-5 py-4 shadow-lg rounded block leading-normal ' +
@@ -163,37 +186,187 @@ const Projects = () => {
                 >
                   Graphic Design
                 </a>
-              </li>
+              </li> */}
             </ul>
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
+            <div
+              className="relative flex flex-col min-w-0 break-words
+             bg-white w-full mb-6 shadow-lg rounded"
+            >
               <div className="px-4 py-5 flex-auto">
                 <div className="tab-content tab-space">
                   <div
                     className={openTab === 1 ? 'block' : 'hidden'}
                     id="link1"
                   >
-                    <p>
-                      Collaboratively administrate empowered markets via
-                      plug-and-play networks. Dynamically procrastinate B2C
-                      users after installed base benefits.
-                      <br />
-                      <br /> Dramatically visualize customer directed
-                      convergence without revolutionary ROI.
-                    </p>
+                    <div className="flex justify-center flex-wrap items-center gap-10">
+                      {Projects.Html_Component.map((content, i) => (
+                        <Card className="w-full max-w-[26rem] shadow-lg">
+                          <CardHeader floated={false} color="blue-gray">
+                            <img src={content.image} alt="ui/ux review check" />
+                            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+                          </CardHeader>
+                          <CardBody>
+                            <div className="mb-3 flex items-center justify-between">
+                              <Typography
+                                variant="h5"
+                                color="blue-gray"
+                                className="font-medium"
+                              >
+                                {content.title}
+                              </Typography>
+                            </div>
+                            <Typography color="gray">{content.desc}</Typography>
+                            <div className="flex justify-center ">
+                              <div className="group mt-8 inline-flex flex-wrap  items-center gap-3">
+                                <Tooltip content="$129 per night">
+                                  <a
+                                    href={content.linkdin}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillLinkedin className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="Free wifi">
+                                  <a
+                                    href={content.Github}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillGithub className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="2 bedrooms">
+                                  <a
+                                    href={content.behance}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillBehanceCircle className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content={`65" HDTV`}>
+                                  <a
+                                    href={content.Instgram}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillInstagram className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="Fire alert">
+                                  <a
+                                    href={content.fb}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillFacebook className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                              </div>
+                            </div>
+                          </CardBody>
+                          <CardFooter className="pt-3">
+                            <Button
+                              size="lg"
+                              fullWidth={true}
+                              className="bg-textColor py-4"
+                            >
+                              <a href={content.Link} target="_blank">
+                                View
+                              </a>
+                            </Button>
+                          </CardFooter>
+                        </Card>
+                      ))}
+                    </div>
                   </div>
                   <div
                     className={openTab === 2 ? 'block' : 'hidden'}
                     id="link2"
                   >
-                    <p>
-                      Completely synergize resource taxing relationships via
-                      premier niche markets. Professionally cultivate one-to-one
-                      customer service with robust ideas.
-                      <br />
-                      <br />
-                      Dynamically innovate resource-leveling customer service
-                      for state of the art customer service.
-                    </p>
+                    <div className="flex justify-center flex-wrap items-center gap-10">
+                      {Projects.Animation_Component.map((content, i) => (
+                        <Card className="w-full max-w-[26rem] shadow-lg">
+                          <CardHeader floated={false} color="blue-gray">
+                            <img src={content.image} alt="ui/ux review check" />
+                            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+                          </CardHeader>
+                          <CardBody>
+                            <div className="mb-3 flex items-center justify-between">
+                              <Typography
+                                variant="h5"
+                                color="blue-gray"
+                                className="font-medium"
+                              >
+                                {content.title}
+                              </Typography>
+                            </div>
+                            <Typography color="gray">{content.desc}</Typography>
+                            <div className="flex justify-center ">
+                              <div className="group mt-8 inline-flex flex-wrap  items-center gap-3">
+                                <Tooltip content="$129 per night">
+                                  <a
+                                    href={content.linkdin}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillLinkedin className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="Free wifi">
+                                  <a
+                                    href={content.Github}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillGithub className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="2 bedrooms">
+                                  <a
+                                    href={content.behance}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillBehanceCircle className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content={`65" HDTV`}>
+                                  <a
+                                    href={content.Instgram}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillInstagram className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="Fire alert">
+                                  <a
+                                    href={content.fb}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillFacebook className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                              </div>
+                            </div>
+                          </CardBody>
+                          <CardFooter className="pt-3">
+                            <Button
+                              size="lg"
+                              fullWidth={true}
+                              className="bg-textColor py-4"
+                            >
+                              <a href={content.Link} target="_blank">
+                                View
+                              </a>
+                            </Button>
+                          </CardFooter>
+                        </Card>
+                      ))}
+                    </div>
                   </div>
                   <div
                     className={openTab === 3 ? 'block' : 'hidden'}
@@ -212,38 +385,177 @@ const Projects = () => {
                     className={openTab === 4 ? 'block' : 'hidden'}
                     id="link4"
                   >
-                    {Projects.project_content.map((content, i) => (
-                      <div className="max-w-[350px] rounded overflow-hidden shadow-lg group ">
-                        <img
-                          className="w-full"
-                          src={content.image}
-                          alt="Sunset in the mountains"
-                        />
-                        <div className="px-6 py-4 flex gap-3 justify-around">
-                          <div className="font-bold text-xl mb-2">
-                            {content.title}
-                          </div>
-                          <div className="text-gray-700 text-base ">
-                            {/* translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 */}
-                            <a
-                              href={content.Link}
-                              target="_blank"
-                              className="text-center bg-textColor text-white px-2 py-2 rounded-md"
+                    <div className="flex justify-center flex-wrap items-center gap-10">
+                      {Projects.React_Project.map((content, i) => (
+                        <Card className="w-full max-w-[26rem] shadow-lg">
+                          <CardHeader floated={false} color="blue-gray">
+                            <img src={content.image} alt="ui/ux review check" />
+                            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+                          </CardHeader>
+                          <CardBody>
+                            <div className="mb-3 flex items-center justify-between">
+                              <Typography
+                                variant="h5"
+                                color="blue-gray"
+                                className="font-medium"
+                              >
+                                {content.title}
+                              </Typography>
+                            </div>
+                            <Typography color="gray">{content.desc}</Typography>
+                            <div className="flex justify-center ">
+                              <div className="group mt-8 inline-flex flex-wrap  items-center gap-3">
+                                <Tooltip content="$129 per night">
+                                  <a
+                                    href={content.linkdin}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillLinkedin className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="Free wifi">
+                                  <a
+                                    href={content.Github}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillGithub className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="2 bedrooms">
+                                  <a
+                                    href={content.behance}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillBehanceCircle className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content={`65" HDTV`}>
+                                  <a
+                                    href={content.Instgram}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillInstagram className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="Fire alert">
+                                  <a
+                                    href={content.fb}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillFacebook className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                              </div>
+                            </div>
+                          </CardBody>
+                          <CardFooter className="pt-3">
+                            <Button
+                              size="lg"
+                              fullWidth={true}
+                              className="bg-textColor py-4"
                             >
-                              READ MORE
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+                              <a href={content.Link} target="_blank">
+                                View
+                              </a>
+                            </Button>
+                          </CardFooter>
+                        </Card>
+                      ))}
+                    </div>
                   </div>
                   <div
                     className={openTab === 5 ? 'block' : 'hidden'}
                     id="link5"
                   >
-                    <p>Next js</p>
+                    <div className="flex justify-center flex-wrap items-center gap-10">
+                      {Projects.Next_Project.map((content, i) => (
+                        <Card className="w-full max-w-[26rem] shadow-lg">
+                          <CardHeader floated={false} color="blue-gray">
+                            <img src={content.image} alt="ui/ux review check" />
+                            <div className="to-bg-black-10 absolute inset-0 h-full w-full bg-gradient-to-tr from-transparent via-transparent to-black/60 " />
+                          </CardHeader>
+                          <CardBody>
+                            <div className="mb-3 flex items-center justify-between">
+                              <Typography
+                                variant="h5"
+                                color="blue-gray"
+                                className="font-medium"
+                              >
+                                {content.title}
+                              </Typography>
+                            </div>
+                            <Typography color="gray">{content.desc}</Typography>
+                            <div className="flex justify-center ">
+                              <div className="group mt-8 inline-flex flex-wrap  items-center gap-3">
+                                <Tooltip content="$129 per night">
+                                  <a
+                                    href={content.linkdin}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillLinkedin className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="Free wifi">
+                                  <a
+                                    href={content.Github}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillGithub className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="2 bedrooms">
+                                  <a
+                                    href={content.behance}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillBehanceCircle className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content={`65" HDTV`}>
+                                  <a
+                                    href={content.Instgram}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillInstagram className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                                <Tooltip content="Fire alert">
+                                  <a
+                                    href={content.fb}
+                                    target="_blank"
+                                    className="cursor-pointer rounded-full border border-blue-500/5 bg-blue-500/5 p-3 text-textColor transition-colors hover:border-blue-500/10 hover:bg-blue-500/10 hover:!opacity-100 group-hover:opacity-70"
+                                  >
+                                    <AiFillFacebook className="h-5 w-5" />
+                                  </a>
+                                </Tooltip>
+                              </div>
+                            </div>
+                          </CardBody>
+                          <CardFooter className="pt-3">
+                            <Button
+                              size="lg"
+                              fullWidth={true}
+                              className="bg-textColor py-4"
+                            >
+                              <a href={content.Link} target="_blank">
+                                View
+                              </a>
+                            </Button>
+                          </CardFooter>
+                        </Card>
+                      ))}
+                    </div>
                   </div>
-                  <div
+                  {/* <div
                     className={openTab === 6 ? 'block' : 'hidden'}
                     id="link6"
                   >
@@ -254,7 +566,7 @@ const Projects = () => {
                     id="link7"
                   >
                     <p>Graphic Design</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -296,7 +608,7 @@ const Projects = () => {
               </SwiperSlide>
             ))}
           </Swiper> */}
-          {Projects.project_content.map((content, i) => (
+          {/* {Projects.React_Component.map((content, i) => (
             <div className="max-w-[350px] rounded overflow-hidden shadow-lg group ">
               <img
                 className="w-full"
@@ -306,7 +618,6 @@ const Projects = () => {
               <div className="px-6 py-4 flex gap-3 justify-around">
                 <div className="font-bold text-xl mb-2">{content.title}</div>
                 <div className="text-gray-700 text-base ">
-                  {/* translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 */}
                   <a
                     href={content.Link}
                     target="_blank"
@@ -317,7 +628,7 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </section>
